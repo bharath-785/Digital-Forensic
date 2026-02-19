@@ -1,8 +1,8 @@
-🔍 Live System Analysis & Malware Investigation
+🔍 Live System Analysis & Malware Investigation:
 
 This project demonstrates a full live incident response workflow performed on a Windows virtual machine after a suspicious executable (LairNetPutty.exe) was discovered on a corporate workstation. The goal of the lab was to determine whether the file posed a threat and to document the investigative process using real forensic tools.
 
-🧭 Project Overview
+🧭 Project Overview:
 
 An employee downloaded an unknown utility without IT approval. As part of the incident response team, I performed a structured investigation that included:
 
@@ -15,7 +15,7 @@ An employee downloaded an unknown utility without IT approval. As part of the in
 This lab simulates a real-world scenario where responders must quickly evaluate a potentially malicious file while the system is still running.
 
 
-🛠️ Tools & Techniques Used
+🛠️ Tools & Techniques Used:
 
 1. Task Manager — Process monitoring and baseline comparison
 2. NETSTAT — Active connection analysis and identification of suspicious remote hosts
@@ -23,7 +23,7 @@ This lab simulates a real-world scenario where responders must quickly evaluate 
 4. VirusTotal — Multi‑vendor malware detection and threat classification
 5. OSINT sources — IP reputation checks and community threat reports
 
-🧪 Key Activities Performed
+🧪 Key Activities Performed:
 
 1. Observed system processes before and after executing the suspicious file
 2. Identified unexpected outbound connections to high‑risk IP addresses
@@ -32,14 +32,15 @@ This lab simulates a real-world scenario where responders must quickly evaluate 
 5. Verified malware classification through VirusTotal (60/67 vendors flagged it)
 6. Researched community reports linking the file to Trojan‑based behavior
 
-🚨 Findings
+🚨 Findings:
+
   1. The executable exhibited malicious characteristics consistent with Trojan malware.
   2. Multiple antivirus engines classified the file as Backdoor, Trojan, or File Infector.
   3. The system attempted to communicate with known malicious IP addresses, including those associated with suspicious activity reports.
   4. Wireshark revealed repeated spurious retransmissions, suggesting abnormal or blocked communication attempts.
   5. The behavior aligned with malware attempting to establish remote access or command‑and‑control communication.
 
-📘 What I Learned
+📘 What I Learned:
 
   1. How to perform live forensic analysis without shutting down the system
   2. How to use Wireshark to interpret TCP behavior and retransmission patterns
